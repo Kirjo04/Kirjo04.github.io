@@ -1,0 +1,110 @@
+/* reset styling*/
+* {
+    margin: 0rem;
+}
+
+/*Set margins*/
+header,
+nav,
+main,
+footer {
+    margin: .5rem;
+}
+
+/*Styling for all pages*/
+body {
+    background-color: beige;
+}
+
+/*Typography*/
+
+h1,
+h2,
+h3 {
+    font-family: "reiher-headline", sans-serif;
+    font-style: normal;
+}
+
+/*Font weight for different headings*/
+h1 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 1.333rem;
+}
+
+
+p, ol{
+    font-family: "baga";
+    font-weight: 100;
+    font-size: 1rem;
+    font-style: normal;
+}
+
+/*Styling and Positioning*/
+
+/*Home page*/
+
+/*Header*/
+.header {
+    margin: .5rem .5rem 0rem;
+    background-color: green;
+    align-items: center;
+    padding: 1.333rem 0rem 1.333rem;
+}
+
+/*Nav Bar*/
+.nav_bar {
+    margin: 0rem .5rem .5rem;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: cyan;
+    padding: 0.875rem 0rem;
+}
+
+/*Body*/
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.ToC {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.url_img {
+    margin: .5;
+}
+
+/*Make links not stretch the whole screen*/
+.ToC a {
+    align-self: flex-start;
+}
+
+/*Footer*/
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0rem;
+    align-items: flex-start;
+}
+
+/*About page*/
+
+/*Role page*/
+
+/*Anatomy and History*/
+
+/*Types of URLs page*/
