@@ -1,23 +1,20 @@
 /* reset styling*/
 * {
     margin: 0rem;
+    padding: 0rem;
 }
 
 /*Set margins*/
-header,
-nav,
-main,
-footer {
-    margin: .5rem;
+#mainFrame {
+    margin: 0rem 7.5rem;
 }
 
 /*Styling for all pages*/
 body {
-    background-color: beige;
+    background-color: #e9fae0;
 }
 
 /*Typography*/
-
 h1,
 h2,
 h3 {
@@ -41,70 +38,316 @@ h3 {
     font-size: 1.333rem;
 }
 
-
-p, ol{
+p,
+ul {
     font-family: "baga";
-    font-weight: 100;
     font-size: 1rem;
     font-style: normal;
+    line-height: 1.5rem;
 }
 
 /*Styling and Positioning*/
 
-/*Home page*/
-
 /*Header*/
 .header {
-    margin: .5rem .5rem 0rem;
-    background-color: green;
+    background-color: #11b525;
     align-items: center;
-    padding: 1.333rem 0rem 1.333rem;
-}
+    padding: 1.333rem 1rem 1.333rem;
 
-/*Nav Bar*/
-.nav_bar {
-    margin: 0rem .5rem .5rem;
+/*Format the header*/
     display: flex;
-    justify-content: space-evenly;
-    background-color: cyan;
-    padding: 0.875rem 0rem;
+    flex-direction: row;
 }
 
-/*Body*/
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
+/*Style the table of contents list*/
+.nav {
+    /*removes bullet points*/
+    list-style-type: none;
 }
 
+/*Style the Table of contents- used for all pages*/
 .ToC {
+    /*Align the contents*/
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    grid-row: 1/3;
+    grid-column: 3;
+
+    /*Style the table of contents*/
+    background-color: #cff6ba;
+    border-radius: 1rem;
 }
 
-.url_img {
-    margin: .5;
+/*Add padding to the ToC title*/
+.ToC h2 {
+    padding: 1rem;
 }
 
-/*Make links not stretch the whole screen*/
-.ToC a {
-    align-self: flex-start;
+/*Style the list of links*/
+#ToC {
+    padding: 1rem;
 }
 
-/*Footer*/
+/*Add padding between the links*/
+#ToC li {
+    background-color: #77cb4a;
+    border-radius: 0.750rem;
+    padding: 0.5rem;
+    margin: 1rem 0rem;
+}
+
+/*Footer- used for all pages*/
 .footer {
+    background-color: #11b525;
     display: flex;
     flex-direction: column;
-    padding: 0.5rem 0rem;
+    padding: 0.5rem 1rem;
     align-items: flex-start;
+}
+
+/*Style all nav links*/
+.nav a {
+    /*removes underline of the link*/
+    text-decoration: none;
+    color: black;
+}
+
+/*Add hover effect to all nav links*/
+.nav a:hover {
+    color: white;
+}
+
+/*layout used for all pages*/
+.main {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0rem;
+}
+
+/*Home page*/
+
+/*image*/
+.url_img {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.intro {
+    grid-row: 1;
+    grid-column: span 2;
+
+    background-color: #cff6ba;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.terms {
+    /*Specify location in grid*/
+    grid-column: span 2;
+    grid-row: 2;
+
+    /*Style the key terms section*/
+    background-color: #cff6ba;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+#word_def {
+    padding: 0rem 3rem;
+}
+
+/*Style the link*/
+#link {
+    color: black;
+    font-size: 1.250rem;
+}
+
+/*Add hover effect*/
+.footer #link:hover {
+    color: white;
 }
 
 /*About page*/
 
+/*set specific gap for the about page so they line up with ToC*/
+#about_main {
+    gap: 0rem 1rem;
+
+}
+
+.about_me {
+    background-color: #cff6ba;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.about_project {
+    background-color: #cff6ba;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
 /*Role page*/
+#role_main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+/*Set column position of the page contents*/
+.role {
+    grid-column: span 2;
+    grid-row: 1;
+    background-color: #cff6ba;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.purpose {
+    grid-row: 2;
+    grid-column: span 2;
+    background-color: #cff6ba;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.HOW {
+    grid-column: 1;
+    grid-row: 3;
+    border-collapse: separate;
+    overflow: hidden;
+    border-spacing: 0rem;
+    border-radius: 1rem;
+}
+
+#role_ToC {
+    grid-column: 3;
+    grid-row: 1/4;
+}
+
+.url_img_2 {
+    border-radius: 1rem;
+}
 
 /*Anatomy and History*/
 
+.content {
+    grid-column: span 2;
+}
+
+/*Give the diagram some space around*/
+.diagram {
+    margin: 0.5rem;
+}
+
+.scheme {
+    width: fit-content;
+    background-color: yellow;
+    grid-row: 1;
+}
+
+.authority {
+    width: fit-content;
+    background-color: deepskyblue;
+    grid-row: 2;
+}
+
+.path {
+    width: fit-content;
+    background-color: deeppink;
+    grid-row: 3;
+}
+
+.parameter {
+    width: fit-content;
+    background-color: goldenrod;
+    grid-row: 4;
+}
+
+.anchor {
+    width: fit-content;
+    background-color: springgreen;
+    grid-row: 5;
+}
+
+.card {
+    background-color: #cff6ba;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+
+.dns_img {
+    border-radius: 1rem;
+    width: 200%
+}
+
+
 /*Types of URLs page*/
+table,
+tr,
+th,
+td {
+    border: solid;
+    border-color: black;
+    border-width: 0.1rem;
+    border-collapse: collapse;
+}
+
+.url_types {
+    display: flex;
+    align-self: flex-start;
+}
+
+#one{
+    grid-column: 1;
+}
+
+#two{
+    grid-column: 2;
+}
+
+td {
+    align-self: flex-start;
+}
+
+/*Style my tables*/
+.url_types th,
+.url_types td {
+    padding: 0.5rem;
+}
+
+/*Style the list */
+#table_ul {
+    list-style: circle;
+    padding: 1rem;
+}
+
+/*Key Concepts page*/
+#KC_main{
+    /*custom gap for this page*/
+    gap: 0rem 1rem;
+}
+
+/*remove the bottom margin from the bottom cards*/
+#bottom_card{
+    margin: 0rem;
+}
+
+/*References Page*/
+.ref_title{
+    grid-column: span 2;
+    background-color: #90d06e;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.references{
+    grid-row: 2;
+    grid-column: span 2;
+    padding: 0rem 4rem;
+    background-color: #cff6ba;
+    border-radius: 1rem;
+    padding: 2rem;
+}

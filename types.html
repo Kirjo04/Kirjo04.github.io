@@ -1,12 +1,105 @@
 <!DOCTYPE html>
+<html>
 
 <head>
   <title>
-    Home Page
+    Types of URLs
   </title>
   <link rel="stylesheet" href="global.css">
 
   <!--Linking fonts-->
   <link rel="stylesheet" href="https://use.typekit.net/pdr3cgt.css">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
+
+<body id="mainFrame">
+  <!--Header and Nav Bar-->
+  <header class="header">
+    <h1 class="title">
+      What is a URL?
+    </h1>
+  </header>
+
+  <!--Content-->
+  <main class="main">
+    <h2>
+      Types of URLs
+    </h2>
+    <!--Define a table-->
+    <table class="url_types" id="one">
+
+      <tr id="absolute">
+        <th>Absolute</th>
+        <td>A full address for a website</td>
+      </tr>
+
+      <tr id="relative">
+        <th>Relative</th>
+        <td>
+          <ul id="table_ul">
+            <li>Uses the path relative to the current page, without including the full domain.</li>
+            <li>Used to map to another resource on the current website</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="callback">
+        <th>Callback</th>
+        <td>Call a user back to a website after completing an action on a third party site</td>
+      </tr>
+
+      <tr id="vanity">
+        <th>Vanity</th>
+        <td>A shorter version of a long URL</td>
+      </tr>
+    </table>
+
+    <table class="url_types" id="two">
+      <tr id="canonical">
+        <th>Canonical</th>
+        <td>Tell a browser which URL is correct when multiple URLs point to the same website</td>
+      </tr>
+      <tr id="deep">
+        <th>Deep</th>
+        <td>Links directly to a specific resource</td>
+      </tr>
+      <tr id="protocol">
+        <th>Protocol-Relative</th>
+        <td>Uses the same protocol as the current webpage</td>
+      </tr>
+    </table>
+
+    <!--Table of Contents-->
+    <section class="ToC" id="role_ToC">
+      <h2>
+        Table of Contents
+      </h2>
+
+      <!--List for the table of contents-->
+      <ul class="nav" id="ToC">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="role.html">Role and Purpose</a></li>
+        <li><a href="anatomy_history.html">Anatomy and History</a></li>
+        <li><a href="types.html">Types of URLs</a></li>
+        <li><a href="keyconcepts.html">Key Concepts</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <h2>
+      Extra Note
+    </h2>
+    <p>
+      This site was made for my IT 3203: Intro to Web Development class.
+    </p>
+    <br>
+    <a href="https://ksuweb.github.io/IT3203/" target="_blank" id="link">Link to class site</a>
+  </footer>
+</body>
+
+</html>

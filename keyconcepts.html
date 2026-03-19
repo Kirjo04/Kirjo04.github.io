@@ -1,12 +1,120 @@
 <!DOCTYPE html>
+<html>
 
 <head>
   <title>
-    Home Page
+    Key Concepts
   </title>
   <link rel="stylesheet" href="global.css">
 
   <!--Linking fonts-->
   <link rel="stylesheet" href="https://use.typekit.net/pdr3cgt.css">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
+
+<body id="mainFrame">
+  <!--Header and Nav Bar-->
+  <header class="header">
+    <h1 class="title">
+      What is a URL?
+    </h1>
+  </header>
+
+  <!--Content of page-->
+  <main class="main" id="KC_main">
+    <!--Table of Contents-->
+    <section class="ToC" id="role_ToC">
+      <h2>
+        Table of Contents
+      </h2>
+
+      <!--List for the table of contents-->
+      <ul class="nav" id="ToC">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="role.html">Role and Purpose</a></li>
+        <li><a href="anatomy_history.html">Anatomy and History</a></li>
+        <li><a href="types.html">Types of URLs</a></li>
+        <li><a href="keyconcepts.html">Key Concepts</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </section>
+
+    <!--Card for each of the key concepts-->
+    <section class="card">
+      <h3>Creation</h3>
+      <p>
+        Tim Berners-Lee created HTTP, HTML, and URL in 1992.
+      </p>
+    </section>
+
+    <section class="card">
+      <h3>
+        Syntax
+      </h3>
+      <p>
+        <ul>
+          <li>:// - goes between the protocol and domain</li>
+          <li>/ - separates the path</li>
+          <li>? - denotes the start of the parameters</li>
+          <li># - indicates an anchor</li>
+        </ul>
+      </p>
+    </section>
+
+    <section class="card">
+      <h3>Problems</h3>
+      <p>
+        <ul>
+          <li>404 Not Found - the page no longer exists</li>
+          <li>URL does not go to the correct webpage</li>
+          <li>Duplicate content - caused by extra slashes or incorrect parameter use</li>
+        </ul>
+      </p>
+    </section>
+
+    <section class="card">
+      <h3>Future</h3>
+      <p>
+        URLs will probably become obsolete in the near future with the rise of AI search
+      </p>
+    </section>
+
+    <section class="card" id="bottom_card">
+      <h3>How they work?</h3>
+      <p>
+        <ol>
+          <li>User enters URL → Browser queries DNS</li>
+          <li>DNS returns IP address</li>
+          <li>Browser sends request to server</li>
+          <li>Server sends content</li>
+          <li>Browser displays content</li>
+        </ol>
+      </p>
+    </section>
+
+    <section class="card" id="bottom_card">
+      <h3>Role</h3>
+      <p>
+        To create a user friendly "code" for locating resources on the internet
+      </p>
+    </section>
+
+  </main>
+
+  <!--Footer-->
+  <footer class="footer">
+      <h2>
+        Extra Note
+      </h2>
+      <p>
+        This site was made for my IT 3203: Intro to Web Development class.
+      </p>
+      <br>
+      <a href="https://ksuweb.github.io/IT3203/" target="_blank" id="link">Link to class site</a>
+    </footer>
+</body>
+
+</html>

@@ -1,12 +1,140 @@
 <!DOCTYPE html>
+<html>
 
 <head>
   <title>
-    Home Page
+    Anatomy and History
   </title>
   <link rel="stylesheet" href="global.css">
 
   <!--Linking fonts-->
   <link rel="stylesheet" href="https://use.typekit.net/pdr3cgt.css">
-
+  <!--tag for viewport scaling-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
+<body id="mainFrame">
+
+  <!--Header and Nav Bar-->
+  <header class="header">
+    <h1 class="title">
+      What is a URL?
+    </h1>
+  </header>
+
+  <main class="main" id="anatomy_main">
+    <!--Table of Contents-->
+    <section class="ToC" id="role_ToC">
+      <h2>
+        Table of Contents
+      </h2>
+
+      <!--List for the table of contents-->
+      <ul class="nav" id="ToC">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="role.html">Role and Purpose</a></li>
+        <li><a href="anatomy_history.html">Anatomy and History</a></li>
+        <li><a href="types.html">Types of URLs</a></li>
+        <li><a href="keyconcepts.html">Key Concepts</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </section>
+
+    <!--Section for the content of this page-->
+    <section class="content">
+      <div class="title">
+        <h2>
+          Anatomy of a URL
+        </h2>
+        <!--Sample URL to highlight the parts-->
+        <p class="diagram">
+          <span class="scheme">https://</span><span class="authority">www.example.com</span>
+          <span class="path">/products</span><span class="parameter">?color=red</span><span
+            class="anchor">#reviews</span>
+
+            <!--Add a line break between the example and the live link-->
+            <br>
+
+          <!--Live link containing all the components-->
+          <a
+            href="https://developer.mozilla.org/en-US/search?q=URL#content">https://developer.mozilla.org/en-US/search?q=URL#content</a>
+        </p>
+
+
+
+      </div>
+      <!--Card for each part of URL-->
+      <div class="card" id="scheme">
+        <h3 class="scheme"><b>Scheme (Protocol)</b></h3>
+        <p>
+          The <b>scheme</b>, or protocol, is the part of a URL that begins with “http” or “https” and defines how data
+          is
+          transferred between a browser and a server. HTTP (Hypertext Transfer Protocol) was created by Tim
+          Berners-Lee in 1992 as a simple, text-based system, while HTTPS adds encryption for secure communication.
+          Earlier protocols like FTP and Gopher handled file transfers and metadata, but HTTPS has become the modern
+          standard due to its security.
+        </p>
+      </div>
+
+      <div class="card" id="authority">
+        <h3 class="authority"><b>Authority (Domain and Port)</b></h3>
+        <p>
+          The <b>authority</b> includes the domain and optional port, identifying where a resource is located. Domains
+          were
+          introduced to replace a single, unscalable host file with a hierarchical system, allowing users to query
+          only the part they need; this system also introduced top-level domains like .com, .edu, and .org. The “www”
+          subdomain was originally used to distinguish web services from others, but today it is mostly a convention,
+          and port numbers are typically omitted when using standard web ports.
+        </p>
+      </div>
+
+      <div class="card" id="path">
+        <h3 class="path"><b>Path</b></h3>
+        <p>
+          The <b>path</b> specifies the exact location of a resource within a website, guiding the browser to a
+          specific page
+          beyond the homepage. It evolved from early systems like Multics, which used different symbols before
+          adopting the forward slash (/) format still used today. This structure allows websites to organize and
+          access content in a clear, hierarchical way.
+        </p>
+      </div>
+
+      <div class="card" id="parameter">
+        <h3 class="parameter"><b>Parameters</b></h3>
+        <p>
+          <b>Parameters</b> are optional parts of a URL used to pass data, often for filtering content or tracking
+          user
+          activity. They originated from early web features like the
+          "isindex" tag, which allowed users to search page indexes directly. Over time, parameters became more
+          flexible and widely used for dynamic content and analytics.
+        </p>
+      </div>
+
+      <div class="card" id="anchor">
+        <h3 class="anchor"><b>Anchor</b></h3>
+        <p>
+          <b>Anchors</b>, or fragments, link to a specific section within a webpage rather than loading a new page. They
+          improve navigation, especially for long documents, by jumping directly to relevant content. Unlike other
+          parts of a URL, anchors are handled entirely by the browser and are not sent to the server.
+        </p>
+      </div>
+    </section>
+
+    <img src="/DNS hierarchy.png" class="dns_img">
+
+  </main>
+  <footer class="footer">
+    <h2>
+      Extra Note
+    </h2>
+    <p>
+      This site was made for my IT 3203: Intro to Web Development class.
+    </p>
+    <br>
+    <a href="https://ksuweb.github.io/IT3203/" target="_blank" id="link">Link to class site</a>
+  </footer>
+
+</body>
+
+</html>
