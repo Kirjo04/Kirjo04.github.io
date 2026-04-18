@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Home
+    </title>
+    <!--Link stylesheet-->
+    <link rel="stylesheet" href="global.css">
+
+    <!--Link external Javascript file-->
+    <script src="script.js" defer></script>
+
+    <!--Viewport sizing-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Linking fonts-->
+    <link rel="stylesheet" href="https://use.typekit.net/pdr3cgt.css">
+    <link rel="stylesheet" href="https://use.typekit.net/pdr3cgt.css">
+</head>
+
+<body id="mainFrame">
+    <!--Header and Nav Bar-->
+    <header class="header">
+        <h1 class="title">
+            What is a URL?
+        </h1>
+    </header>
+    <main id="quiz_main">
+        <h1>Self-Assessment Quiz</h1>
+
+        <!--Questions and Answers-->
+        <form class="questions_space" id="quiz">
+
+            <div class="q1">
+                <p>Question 1: What does URL stand for?</p>
+
+                <label>
+                    <input type="radio" name="question1" value="Uniform Resource Locator">
+                    Uniform Resource Locator
+                </label>
+
+                <label>
+                    <input type="radio" name="question1" value="Uniform Retrieval Locator">
+                    Uniform Retrieval Locator
+                </label>
+
+                <label>
+                    <input type="radio" name="question1" value="Unit Resource Location">
+                    Unit Resource Location
+                </label>
+            </div>
+
+            <div class="q2">
+                <p>Question 2: Who created the URL?</p>
+
+                <label>
+                    <input type="radio" name="question2" value="Mark Cuban">
+                    Mark Cuban
+                </label>
+
+                <label>
+                    <input type="radio" name="question2" value="Tim Berners-Lee">
+                    Tim Berners-Lee
+                </label>
+
+                <label>
+                    <input type="radio" name="question2" value="Gordan Ramsey">
+                    Gordan Ramsey
+                </label>
+            </div>
+
+            <div class="q3">
+                <p>Question 3: What is used to pass data?</p>
+
+                <label>
+                    <input type="radio" name="question3" value="Parameters" >
+                    Parameters
+                </label>
+
+                <label>
+                    <input type="radio" name="question3" value="Powers">
+                    Powers
+                </label>
+
+                <label>
+                    <input type="radio" name="question3" value="Scheme">
+                    Scheme
+                </label>
+            </div>
+
+            <div class="q4">
+                <p>Question 4: The ______ of a URL is to allow users to find and retrieve resources on the internet.</p>
+                <input type="text" name="question4">
+            </div>
+
+            <div class="q5">
+                <p> Question 5: The scheme is the part of the URL that begins with _____.</p>
+                <input type="text" name="question5">
+            </div>
+
+            <div class="q6">
+                <p>Question 6: Which of the following are types of URLs?</p>
+
+                <!--Choices-->
+                <label>
+                    <input type="checkbox" name="question6" value="A">
+                    A. Absolute
+                </label>
+
+                <label>
+                    <input type="checkbox" name="question6" value="B">
+                    B. Calling
+                </label>
+
+                <label>
+                    <input type="checkbox" name="question6" value="C">
+                    C. Protocol-Relative
+                </label>
+
+                <label>
+                    <input type="checkbox" name="question6" value="D">
+                    D. Canonical
+                </label>
+                <label>
+                    <input type="checkbox" name="question6" value="E">
+                    E. Absolute-Relative
+                </label>
+            </div>
+
+            <!--submit button-->
+            <button type="button" id="submit">Submit</button>
+
+        </form>
+
+        <!--element to show the results-->
+        <section id="result">
+
+            <h2 id="pass_fail"></h2>
+
+            <div class="score_announcement">
+                <h2>Your Score is: </h2> <h2 id="score"></h2>
+            </div>
+
+            <div id="results">
+            </div>
+
+            <button type="reset" id="reset">Reset Quiz</button>
+        </section>
+
+        <!--Table of Contents-->
+        <section class="ToC" id="quiz_ToC">
+            <h2>
+                Table of Contents
+            </h2>
+            <!--List for the table of contents-->
+            <ul class="nav" id="ToC">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="role.html">Role and Purpose</a></li>
+                <li><a href="anatomy_history.html">Anatomy and History</a></li>
+                <li><a href="types.html">Types of URLs</a></li>
+                <li><a href="keyconcepts.html">Key Concepts</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!--Link to class site-->
+    <footer class="footer">
+        <h2>
+            Extra Note
+        </h2>
+        <p>
+            This site was made for my IT 3203: Intro to Web Development class.
+        </p>
+        <br>
+        <a href="https://ksuweb.github.io/IT3203/" target="_blank" id="link">Link to class site</a>
+    </footer>
+</body>

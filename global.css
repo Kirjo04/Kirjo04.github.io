@@ -6,12 +6,12 @@
 
 /*Set margins*/
 #mainFrame {
-    margin: 0rem 7.5rem;
+    margin: 0rem 1rem;
 }
 
 /*Styling for all pages*/
 body {
-    background-color: #e9fae0;
+    background-color: white;
 }
 
 /*Typography*/
@@ -54,7 +54,7 @@ ul {
     align-items: center;
     padding: 1.333rem 1rem 1.333rem;
 
-/*Format the header*/
+    /*Format the header*/
     display: flex;
     flex-direction: row;
 }
@@ -174,7 +174,6 @@ ul {
 /*set specific gap for the about page so they line up with ToC*/
 #about_main {
     gap: 0rem 1rem;
-
 }
 
 .about_me {
@@ -296,16 +295,38 @@ td {
     border-collapse: collapse;
 }
 
+#types_main {
+    display: flex;
+    flex-direction: row;
+}
+
+#types_main img {
+    width: 35%;
+    border: solid;
+    border-color: #11b525;
+    border-radius: 1rem;
+}
+
+.type_table {
+    background-color: #cff6ba;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.type_table h2 {
+    padding-bottom: 1rem;
+}
+
 .url_types {
     display: flex;
     align-self: flex-start;
 }
 
-#one{
+#one {
     grid-column: 1;
 }
 
-#two{
+#two {
     grid-column: 2;
 }
 
@@ -326,28 +347,102 @@ td {
 }
 
 /*Key Concepts page*/
-#KC_main{
+#KC_main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
     /*custom gap for this page*/
     gap: 0rem 1rem;
 }
 
 /*remove the bottom margin from the bottom cards*/
-#bottom_card{
+#bottom_card {
     margin: 0rem;
 }
 
+#KC_ToC{
+    grid-row: 1/7;
+}
+
 /*References Page*/
-.ref_title{
+.ref_title {
     grid-column: span 2;
     background-color: #90d06e;
     border-radius: 1rem;
     padding: 1rem;
 }
-.references{
+
+.references {
     grid-row: 2;
     grid-column: span 2;
     padding: 0rem 4rem;
     background-color: #cff6ba;
     border-radius: 1rem;
     padding: 2rem;
+}
+
+/*Quiz Page*/
+
+#quiz_main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+#quiz_ToC {
+    grid-column: 2;
+}
+
+#quiz div {
+    border: solid;
+    border-color: #11b525;
+    border-radius: 2.5rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.questions_space label {
+    display: flex;
+    padding: 1rem 2rem;
+    align-items: center;
+    /* keeps radio and text aligned */
+    width: fit-content;
+    /* prevents full-width clickable area */
+    gap: 1rem;
+}
+
+#submit,
+#reset {
+    display: block;
+    margin: 1rem 0rem;
+    width: 100%;
+
+    background-color: #11b525;
+    padding: 0.5rem;
+}
+
+#result {
+    display: none;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+#results {
+    border: solid;
+    border-color: #11b525;
+    border-radius: 2.5rem;
+    padding: 1rem;
+    margin: 1rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.score_announcement {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    gap: 2rem;
 }
