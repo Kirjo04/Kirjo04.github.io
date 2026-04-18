@@ -72,39 +72,17 @@ function text(score, questionNum, key) {
 function multiSelect(score, questionNum, key) {
     //get the selected answers
     const selected_answers = document.querySelectorAll(`input[name="${key}"]:checked`);
+    //convert the nodeList to array and convert the contents to strings
+    const selected = Array.from(selected_answers).map(item => item.value);
 
     //get the correct answers
-    let correct_answers = answers[key].correct;
+    const correct_answers = answers[key].correct;
 
-    //define a variable for pts so the multi-selection can be worth less
-    let pts = 0;
-
-    //convert the nodeList to values
-    selected_answers.forEach(input => {
-        let user_answer = input.value;
-
-        //compare user answer to correct answer
-        for (ans in correct_answers) {
-            if (user_answer == correct_answers[ans]) {
-                pts += 1;
-            }else {
-                pts -= 1;
-            }
-        };
-    });
-
-    if (pts == 1) {
-        score += 0.33;
-        document.getElementById("results").innerHTML += "<p>Question " + questionNum + ": Incorrect - " + answers[key].correct + "</p>";
-    } else if (pts == 2) {
-        score += 0.66;
-        document.getElementById("results").innerHTML += "<p>Question " + questionNum + ": Incorrect - " + answers[key].correct + "</p>";
-    } else if (pts == 3) {
-        score += 1;
-        document.getElementById("results").innerHTML += "<p>Question " + questionNum + ": Correct </p>";
-    }else if (pts == 0){
-        document.getElementById("results").innerHTML += "<p>Question " + questionNum + ": Incorrect - " + answers[key].correct + "</p>";
-    }else if (pts<0){
+    //compare length and values
+    if (selected.length === correct_answers.length && selected.every(val => correct_answers.includes(val))){
+        score++;
+        document.getElementById("results").innerHTML += "<p>Question " + questionNum + ": Correct</p>";
+    }else{
         document.getElementById("results").innerHTML += "<p>Question " + questionNum + ": Incorrect - " + answers[key].correct + "</p>";
     }
 
