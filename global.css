@@ -1,20 +1,15 @@
-/* reset styling*/
+/* RESET & BASIC STYLING*/
 * {
     margin: 0rem;
     padding: 0rem;
 }
 
-/*Set margins*/
-#mainFrame {
+.mainFrame {
     margin: 0rem 1rem;
-}
-
-/*Styling for all pages*/
-body {
     background-color: white;
 }
 
-/*Typography*/
+/*TYPOGRAPHY*/
 h1,
 h2,
 h3 {
@@ -23,6 +18,13 @@ h3 {
 }
 
 /*Font weight for different headings*/
+h1,
+h2,
+h3 {
+    font-family: "reiher-headline", sans-serif;
+    font-style: normal;
+}
+
 h1 {
     font-weight: 700;
     font-size: 2rem;
@@ -40,15 +42,14 @@ h3 {
 
 p,
 ul {
-    font-family: "baga";
+    font-family: "baga", sans-serif;
     font-size: 1rem;
-    font-style: normal;
     line-height: 1.5rem;
 }
 
-/*Styling and Positioning*/
+/*STYLING*/
 
-/*Header*/
+/*Header & Footer*/
 .header {
     background-color: #11b525;
     align-items: center;
@@ -59,44 +60,6 @@ ul {
     flex-direction: row;
 }
 
-/*Style the table of contents list*/
-.nav {
-    /*removes bullet points*/
-    list-style-type: none;
-}
-
-/*Style the Table of contents- used for all pages*/
-.ToC {
-    /*Align the contents*/
-    display: flex;
-    flex-direction: column;
-    grid-row: 1/3;
-    grid-column: 3;
-
-    /*Style the table of contents*/
-    background-color: #cff6ba;
-    border-radius: 1rem;
-}
-
-/*Add padding to the ToC title*/
-.ToC h2 {
-    padding: 1rem;
-}
-
-/*Style the list of links*/
-#ToC {
-    padding: 1rem;
-}
-
-/*Add padding between the links*/
-#ToC li {
-    background-color: #77cb4a;
-    border-radius: 0.750rem;
-    padding: 0.5rem;
-    margin: 1rem 0rem;
-}
-
-/*Footer- used for all pages*/
 .footer {
     background-color: #11b525;
     display: flex;
@@ -105,57 +68,88 @@ ul {
     align-items: flex-start;
 }
 
-/*Style all nav links*/
+/*LAYOUT*/
+.main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ToC {
+    background-color: #cff6ba;
+    border-radius: 1rem;
+}
+
+/*COMPONENTS*/
+
+.card {
+    background-color: #cff6ba;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.nav {
+    list-style: none;
+}
+
 .nav a {
-    /*removes underline of the link*/
     text-decoration: none;
     color: black;
 }
 
-/*Add hover effect to all nav links*/
 .nav a:hover {
     color: white;
 }
 
-/*layout used for all pages*/
-.main {
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    margin: 1rem 0rem;
+/* ToC styling */
+.ToC h2 {
+    padding: 1rem;
 }
 
-/*Home page*/
+#ToC {
+    padding: 1rem;
+}
 
-/*image*/
+#ToC li {
+    background-color: #77cb4a;
+    border-radius: 0.75rem;
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+
+
+/*IMAGES*/
+
 .url_img {
     width: 100%;
-    margin-top: 1rem;
 }
 
-.intro {
-    grid-row: 1;
-    grid-column: span 2;
-
-    background-color: #cff6ba;
-    padding: 2rem;
+.url_img_2 {
     border-radius: 1rem;
 }
 
-.terms {
-    /*Specify location in grid*/
-    grid-column: span 2;
-    grid-row: 2;
+.dns_img {
+    border-radius: 1rem;
+    width: 525px;
+}
 
-    /*Style the key terms section*/
-    background-color: #cff6ba;
-    padding: 2rem;
+.types_img {
+    width: 100%;
+    border: solid;
+    border-color: #11b525;
     border-radius: 1rem;
 }
 
-#word_def {
-    padding: 0rem 3rem;
+.web_comp{
+    width: 100%;
+    max-width: 800px;
 }
 
 /*Style the link*/
@@ -169,120 +163,20 @@ ul {
     color: white;
 }
 
-/*About page*/
-
-/*set specific gap for the about page so they line up with ToC*/
-#about_main {
-    gap: 0rem 1rem;
-}
-
-.about_me {
-    background-color: #cff6ba;
-    border-radius: 1rem;
-    padding: 2rem;
-}
-
-.about_project {
-    background-color: #cff6ba;
-    border-radius: 1rem;
-    padding: 2rem;
-}
-
 /*Role page*/
-#role_main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-}
-
-/*Set column position of the page contents*/
-.role {
-    grid-column: span 2;
-    grid-row: 1;
-    background-color: #cff6ba;
-    border-radius: 1rem;
-    padding: 2rem;
-}
-
-.purpose {
-    grid-row: 2;
-    grid-column: span 2;
-    background-color: #cff6ba;
-    border-radius: 1rem;
-    padding: 2rem;
-}
-
 .HOW {
-    grid-column: 1;
-    grid-row: 3;
     border-collapse: separate;
     overflow: hidden;
     border-spacing: 0rem;
     border-radius: 1rem;
 }
 
-#role_ToC {
-    grid-column: 3;
-    grid-row: 1/4;
-}
-
-.url_img_2 {
-    border-radius: 1rem;
-}
-
 /*Anatomy and History*/
-
-.content {
-    grid-column: span 2;
-}
 
 /*Give the diagram some space around*/
 .diagram {
     margin: 0.5rem;
 }
-
-.scheme {
-    width: fit-content;
-    background-color: yellow;
-    grid-row: 1;
-}
-
-.authority {
-    width: fit-content;
-    background-color: deepskyblue;
-    grid-row: 2;
-}
-
-.path {
-    width: fit-content;
-    background-color: deeppink;
-    grid-row: 3;
-}
-
-.parameter {
-    width: fit-content;
-    background-color: goldenrod;
-    grid-row: 4;
-}
-
-.anchor {
-    width: fit-content;
-    background-color: springgreen;
-    grid-row: 5;
-}
-
-.card {
-    background-color: #cff6ba;
-    border-radius: 1rem;
-    padding: 2rem;
-    margin-bottom: 1rem;
-}
-
-.dns_img {
-    border-radius: 1rem;
-    width: 200%
-}
-
 
 /*Types of URLs page*/
 table,
@@ -292,25 +186,17 @@ td {
     border: solid;
     border-color: black;
     border-width: 0.1rem;
+}
+
+table {
     border-collapse: collapse;
-}
-
-#types_main {
-    display: flex;
-    flex-direction: row;
-}
-
-#types_main img {
-    width: 35%;
-    border: solid;
-    border-color: #11b525;
-    border-radius: 1rem;
 }
 
 .type_table {
     background-color: #cff6ba;
     padding: 2rem;
     border-radius: 1rem;
+    border-collapse: collapse;
 }
 
 .type_table h2 {
@@ -346,23 +232,9 @@ td {
     padding: 1rem;
 }
 
-/*Key Concepts page*/
-#KC_main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    margin-top: 1rem;
-    /*custom gap for this page*/
-    gap: 0rem 1rem;
-}
-
 /*remove the bottom margin from the bottom cards*/
 #bottom_card {
     margin: 0rem;
-}
-
-#KC_ToC{
-    grid-row: 1/7;
 }
 
 /*References Page*/
@@ -384,16 +256,6 @@ td {
 
 /*Quiz Page*/
 
-#quiz_main {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
-
-#quiz_ToC {
-    grid-column: 2;
-}
-
 #quiz div {
     border: solid;
     border-color: #11b525;
@@ -406,10 +268,9 @@ td {
     display: flex;
     padding: 1rem 2rem;
     align-items: center;
-    /* keeps radio and text aligned */
-    width: fit-content;
-    /* prevents full-width clickable area */
     gap: 1rem;
+    /* prevents full-width clickable area */
+    width: fit-content;
 }
 
 #submit,
@@ -445,4 +306,26 @@ td {
     align-items: center;
     padding-bottom: 1.5rem;
     gap: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+
+    /*make the margin around the URL image smaller*/
+    .url_img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .card {
+        margin: 0rem;
+    }
+
 }

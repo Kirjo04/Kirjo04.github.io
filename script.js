@@ -2,6 +2,16 @@ const button = document.getElementById("submit");
 
 const reset_button = document.getElementById("reset");
 
+if (button) {
+    //make the button work when clicked
+    button.addEventListener("click", calcScore);
+}
+
+if (reset_button) {
+    // add event to reset button
+    reset_button.addEventListener("click", resetQuiz);
+}
+
 //object to store answers
 const answers = {
     question1: {
@@ -27,6 +37,10 @@ const answers = {
     question6: {
         type: "multi-select",
         correct: ["A", "C", "D"]
+    },
+    question7: {
+        type: "sequence",
+        correct: ["3", "6", "4", "1", "5", "7", "2"]
     }
 };
 
@@ -79,10 +93,46 @@ function multiSelect(score, questionNum, key) {
     const correct_answers = answers[key].correct;
 
     //compare length and values
-    if (selected.length === correct_answers.length && selected.every(val => correct_answers.includes(val))){
+    if (selected.length === correct_answers.length && selected.every(val => correct_answers.includes(val))) {
         score++;
         document.getElementById("results").innerHTML += "<p>Question " + questionNum + ": Correct</p>";
-    }else{
+    } else {
+        document.getElementById("results").innerHTML += "<p>Question " + questionNum + ": Incorrect - " + answers[key].correct + "</p>";
+    }
+
+    return score;
+};
+
+//grade sequence
+function sequence(score, questionNum, key) {
+    //get the selected answers
+    const selected_answers = document.querySelectorAll(`select[name="${key}"] option:checked`);
+
+    //map the NodeList to an array
+    selected_answers.forEach(select => {
+        user_answers = Array.from(selected_answers).map(item => item.value);
+    });
+
+    console.log(user_answers);
+    //compare user answer to correct answer
+    //loop through the correct answer
+    i = 0;
+
+    //define pts
+    pts = 0;
+
+    for (let x of answers[key].correct) {
+        if (user_answers[i] == x) {
+            pts++;
+        }
+        //increment i
+        i++;
+    };
+
+    if (pts == 7) {
+        score++;
+        document.getElementById("results").innerHTML += "<p>Question " + questionNum + ": Correct</p>";
+    } else {
         document.getElementById("results").innerHTML += "<p>Question " + questionNum + ": Incorrect - " + answers[key].correct + "</p>";
     }
 
@@ -106,6 +156,9 @@ function calcScore() {
 
         } else if (answers[key].type == "multi-select") {
             score = multiSelect(score, questionNum, key);
+
+        } else if (answers[key].type == "sequence") {
+            score = sequence(score, questionNum, key);
         }
 
         //increment the question counter
@@ -113,7 +166,7 @@ function calcScore() {
     };
 
     //print score and pass/fail
-    if (score < 3) {
+    if (score < 5) {
         const element = document.getElementById("pass_fail");
         element.innerHTML = "Try Again.";
         element.style.backgroundColor = "red";
@@ -149,11 +202,4 @@ function resetQuiz() {
     const sub_button = document.getElementById("submit");
     sub_button.style.display = "block";
 };
-
-
-// add event to reset button
-reset_button.addEventListener("click", resetQuiz);
-
-//make the button work when clicked
-button.addEventListener("click", calcScore);
 

@@ -23,130 +23,237 @@
             What is a URL?
         </h1>
     </header>
-    <main id="quiz_main">
-        <h1>Self-Assessment Quiz</h1>
+    <main class="main">
 
-        <!--Questions and Answers-->
-        <form class="questions_space" id="quiz">
+        <section class="content">
+            <h1>Self-Assessment Quiz</h1>
 
-            <div class="q1">
-                <p>Question 1: What does URL stand for?</p>
+            <!--Questions and Answers-->
+            <form class="questions_space" id="quiz">
 
-                <label>
-                    <input type="radio" name="question1" value="Uniform Resource Locator">
-                    Uniform Resource Locator
-                </label>
+                <div class="q1">
+                    <p>Question 1: What does URL stand for?</p>
 
-                <label>
-                    <input type="radio" name="question1" value="Uniform Retrieval Locator">
-                    Uniform Retrieval Locator
-                </label>
+                    <label>
+                        <input type="radio" name="question1" value="Uniform Resource Locator">
+                        Uniform Resource Locator
+                    </label>
 
-                <label>
-                    <input type="radio" name="question1" value="Unit Resource Location">
-                    Unit Resource Location
-                </label>
-            </div>
+                    <label>
+                        <input type="radio" name="question1" value="Uniform Retrieval Locator">
+                        Uniform Retrieval Locator
+                    </label>
 
-            <div class="q2">
-                <p>Question 2: Who created the URL?</p>
+                    <label>
+                        <input type="radio" name="question1" value="Unit Resource Location">
+                        Unit Resource Location
+                    </label>
+                </div>
 
-                <label>
-                    <input type="radio" name="question2" value="Mark Cuban">
-                    Mark Cuban
-                </label>
+                <div class="q2">
+                    <p>Question 2: Who created the URL?</p>
 
-                <label>
-                    <input type="radio" name="question2" value="Tim Berners-Lee">
-                    Tim Berners-Lee
-                </label>
+                    <label>
+                        <input type="radio" name="question2" value="Mark Cuban">
+                        Mark Cuban
+                    </label>
 
-                <label>
-                    <input type="radio" name="question2" value="Gordan Ramsey">
-                    Gordan Ramsey
-                </label>
-            </div>
+                    <label>
+                        <input type="radio" name="question2" value="Tim Berners-Lee">
+                        Tim Berners-Lee
+                    </label>
 
-            <div class="q3">
-                <p>Question 3: What is used to pass data?</p>
+                    <label>
+                        <input type="radio" name="question2" value="Gordan Ramsey">
+                        Gordan Ramsey
+                    </label>
+                </div>
 
-                <label>
-                    <input type="radio" name="question3" value="Parameters" >
-                    Parameters
-                </label>
+                <div class="q3">
+                    <p>Question 3: What is used to pass data?</p>
 
-                <label>
-                    <input type="radio" name="question3" value="Powers">
-                    Powers
-                </label>
+                    <label>
+                        <input type="radio" name="question3" value="Parameters">
+                        Parameters
+                    </label>
 
-                <label>
-                    <input type="radio" name="question3" value="Scheme">
-                    Scheme
-                </label>
-            </div>
+                    <label>
+                        <input type="radio" name="question3" value="Powers">
+                        Powers
+                    </label>
 
-            <div class="q4">
-                <p>Question 4: The ______ of a URL is to allow users to find and retrieve resources on the internet.</p>
-                <input type="text" name="question4">
-            </div>
+                    <label>
+                        <input type="radio" name="question3" value="Scheme">
+                        Scheme
+                    </label>
+                </div>
 
-            <div class="q5">
-                <p> Question 5: The scheme is the part of the URL that begins with _____.</p>
-                <input type="text" name="question5">
-            </div>
+                <div class="q4">
+                    <p>Question 4: The ______ of a URL is to allow users to find and retrieve resources on the internet.
+                    </p>
+                    <input type="text" name="question4" autocomplete="off">
+                </div>
 
-            <div class="q6">
-                <p>Question 6: Which of the following are types of URLs?</p>
+                <div class="q5">
+                    <p> Question 5: The scheme is the part of the URL that begins with _____.</p>
+                    <input type="text" name="question5" autocomplete="off">
+                </div>
 
-                <!--Choices-->
-                <label>
-                    <input type="checkbox" name="question6" value="A">
-                    A. Absolute
-                </label>
+                <div class="q6">
+                    <p>Question 6: Which of the following are types of URLs?</p>
 
-                <label>
-                    <input type="checkbox" name="question6" value="B">
-                    B. Calling
-                </label>
+                    <!--Choices-->
+                    <label>
+                        <input type="checkbox" name="question6" value="A">
+                        A. Absolute
+                    </label>
 
-                <label>
-                    <input type="checkbox" name="question6" value="C">
-                    C. Protocol-Relative
-                </label>
+                    <label>
+                        <input type="checkbox" name="question6" value="B">
+                        B. Calling
+                    </label>
 
-                <label>
-                    <input type="checkbox" name="question6" value="D">
-                    D. Canonical
-                </label>
-                <label>
-                    <input type="checkbox" name="question6" value="E">
-                    E. Absolute-Relative
-                </label>
-            </div>
+                    <label>
+                        <input type="checkbox" name="question6" value="C">
+                        C. Protocol-Relative
+                    </label>
 
-            <!--submit button-->
-            <button type="button" id="submit">Submit</button>
+                    <label>
+                        <input type="checkbox" name="question6" value="D">
+                        D. Canonical
+                    </label>
+                    <label>
+                        <input type="checkbox" name="question6" value="E">
+                        E. Absolute-Relative
+                    </label>
+                </div>
 
-        </form>
+                <div class="q7">
+                    <p>Question 7: Order the the steps it takes to retrieve a resource from a URL:</p>
 
-        <!--element to show the results-->
-        <section id="result">
+                    <label>
+                        <select name="question7">
+                            <option>-------</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                        DNS finds the IP address that corresponds to the URL
+                    </label>
 
-            <h2 id="pass_fail"></h2>
+                    <label>
+                        <select name="question7">
+                            <option>-------</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                        Server sends the content back
+                    </label>
 
-            <div class="score_announcement">
-                <h2>Your Score is: </h2> <h2 id="score"></h2>
-            </div>
+                    <label>
+                        <select name="question7">
+                            <option>-------</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                        DNS sends IP address back to browser
+                    </label>
 
-            <div id="results">
-            </div>
+                    <label>
+                        <select name="question7">
+                            <option>-------</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                        URL is inputted into the browser by the user
+                    </label>
 
-            <button type="reset" id="reset">Reset Quiz</button>
+                    <label>
+                        <select name="question7">
+                            <option>-------</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                        Browser sends request to the server the IP address points to
+                    </label>
+
+                    <label>
+                        <select name="question7">
+                            <option>-------</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                        Browser displays the information
+                    </label>
+
+                    <label>
+                        <select name="question7">
+                            <option>-------</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                        Browser sends URL to DNS
+                    </label>
+                </div>
+
+                <!--submit button-->
+                <button type="button" id="submit">Submit</button>
+
+            </form>
+
+            <!--element to show the results-->
+            <section id="result">
+
+                <h2 id="pass_fail"></h2>
+
+                <div class="score_announcement">
+                    <h2>Your Score is: </h2>
+                    <h2 id="score"></h2>
+                </div>
+
+                <div id="results">
+                </div>
+
+                <button type="reset" id="reset">Reset Quiz</button>
+            </section>
         </section>
 
         <!--Table of Contents-->
-        <section class="ToC" id="quiz_ToC">
+        <section class="ToC">
             <h2>
                 Table of Contents
             </h2>
@@ -178,5 +285,5 @@
 
     <!--Link external Javascript file-->
     <script src="script.js" defer></script>
-    
+
 </body>

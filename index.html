@@ -8,9 +8,6 @@
   <!--Link stylesheet-->
   <link rel="stylesheet" href="global.css">
 
-  <!--Link external Javascript file-->
-  <script src="script.js" defer></script>
-
   <!--Viewport sizing-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -19,7 +16,7 @@
   <link rel="stylesheet" href="https://use.typekit.net/pdr3cgt.css">
 </head>
 
-<body id="mainFrame">
+<body class="mainFrame">
 
   <!--Header and Nav Bar-->
   <header class="header">
@@ -29,61 +26,60 @@
   </header>
 
   <!--Homepage contents-->
-  <main>
-    <img src="/project_images/URL.png" class="url_img" alt="url image">
+  <main class="main">
 
-    <!--Section of main for all content except the image-->
-    <section class="main">
-      <!--Brief Intro-->
-      <section class="intro">
-        <h2>
-          Introduction
-        </h2>
+    <!-- LEFT SIDE CONTENT -->
+    <section class="content">
+
+      <img src="project_images/URL.png" class="url_img" alt="url image">
+
+      <section class="card">
+        <h2>Introduction</h2>
         <p>
           Does the word, Uniform Resource Locator sound familiar? Most likely, it doesn't. But the acronym URL probably
-          is.
-          But what is a URL exactly? The URL is one of 5 technology components of the web. The web has 5 aspects to it:
-          presentation, client, web server, addressing, and communication protocols. Each of these has its own unique
-          component, the URL is the component for addressing.
+          is. But what is a URL exactly? The URL is one of 5 technology components of the web. The web has 5 aspects to
+          it: presentation, client, web server, addressing, and communication protocols. Each of these has its own
+          unique component, the URL is the component for addressing.
         </p>
       </section>
 
-      <!--Key Terms-->
-      <section class="terms">
-        <h2>
-          Key Terms
-        </h2>
+      <img src="project_images/webcomponents.png" class="web_comp">
 
-        <!--Put in a <p> tag so the font will be used-->
-        <p>
+      <section class="card">
+        <h2>Key Terms</h2>
         <ul id="word_def">
           <li>Hypertext Transfer Protocol (HTTP) - The protocol browsers use to transfer data</li>
-          <li>Uniform Resource Locator (URL) - The code that allows browsers to access a resource</li>
+          <li>Uniform Resource Locator (URL) - a subset of URIs, identifies a resource and provides a 
+            means of locating that resource
+          </li>
           <li>Domain Name System (DNS) - The server that stores all domains.</li>
           <li>Top-Level Domain - The final segment of the domain (e.g. .com, .org, etc.)</li>
           <li>Path - The portion of a URL that specifies the exact location of a resource within a website.</li>
-          <li>Search Engine Optimization (SEO) - improving the visibility of your site so it appears in search engines</li>
+          <li>Search Engine Optimization (SEO) - improving the visibility of your site so it appears in search engines
+          </li>
+          <li>Uniform Resource Identifier (URI) - a compact sequence of characters that
+            identifies an abstract or physical resource
+          </li>
         </ul>
-        </p>
       </section>
 
-      <!--Table of Contents-->
-      <section class="ToC">
-        <h2>
-          Table of Contents
-        </h2>
-        <!--List for the table of contents-->
-        <ul class="nav" id="ToC">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="role.html">Role and Purpose</a></li>
-          <li><a href="anatomy_history.html">Anatomy and History</a></li>
-          <li><a href="types.html">Types of URLs</a></li>
-          <li><a href="keyconcepts.html">Key Concepts</a></li>
-          <li><a href="quiz.html">Quiz</a></li>
-          <li><a href="references.html">References</a></li>
-        </ul>
-      </section>
+    </section>
+
+    <!-- RIGHT SIDE -->
+    <section class="ToC">
+      <h2>Table of Contents</h2>
+
+      <ul class="nav" id="ToC">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="role.html">Role and Purpose</a></li>
+        <li><a href="anatomy_history.html">Anatomy and History</a></li>
+        <li><a href="types.html">Types of URLs</a></li>
+        <li><a href="keyconcepts.html">Key Concepts</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </section>
 
   </main>
 
@@ -98,6 +94,9 @@
     <br>
     <a href="https://ksuweb.github.io/IT3203/" target="_blank" id="link">Link to class site</a>
   </footer>
+
+  <!--Link external Javascript file-->
+  <script src="script.js" defer></script>
 
 </body>
 
